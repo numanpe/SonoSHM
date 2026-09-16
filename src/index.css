@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --lab-bg: #f4f5f7;
+  --lab-panel: #ffffff;
+  --lab-border: #d7dbe2;
+  --lab-ink: #16202a;
+  --lab-ink-soft: #4b5563;
+  --lab-accent: #1d5b8f;
+  --lab-accent-soft: #e6eef5;
+  --lab-navy: #0f2138;
+  --lab-mono: 'IBM Plex Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --lab-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--lab-sans);
+  background: var(--lab-bg);
+  color: var(--lab-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-mono-lab {
+  font-family: var(--lab-mono);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3c9d3;
+  border-radius: 6px;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+}
+
+.lab-scroll {
+  scrollbar-width: thin;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+.animate-pulse-soft {
+  animation: pulse-soft 2.2s ease-in-out infinite;
+}
